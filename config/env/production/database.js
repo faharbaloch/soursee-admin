@@ -7,9 +7,7 @@ module.exports = ({ env }) => ({
         database: env('MYSQLDATABASE', 'strapi'),
         user: env('MYSQLUSER', 'strapi'),
         password: env('MYSQLPASSWORD', 'strapi'),
-        ssl: {
-          rejectUnauthorized: true, // Enforces certificate validation
-        },
+       ssl: env.bool(true),
       },
       debug: false,
     },
