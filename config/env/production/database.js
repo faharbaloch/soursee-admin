@@ -8,7 +8,7 @@ module.exports = ({ env }) => ({
         user: env('MYSQLUSER', 'strapi'),
         password: env('MYSQLPASSWORD', 'strapi'),
         ssl: {
-          rejectUnauthorized: env.bool('DATABASE_SSL_SELF', true), // For self-signed certificates
+          rejectUnauthorized: true, // Enforces certificate validation
         },
       },
       debug: false,
